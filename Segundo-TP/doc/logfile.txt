@@ -11,55 +11,21 @@ C:\Program Files\BlueJ\jdk\bin\javadoc.exe
 -nohelp
 -nonavbar
 -source
-21
+17
 -classpath
-C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\javafx-base-21.0.3-win.jar;C:\Program Files\BlueJ\lib\javafx-controls-21.0.3-win.jar;C:\Program Files\BlueJ\lib\javafx-fxml-21.0.3-win.jar;C:\Program Files\BlueJ\lib\javafx-graphics-21.0.3-win.jar;C:\Program Files\BlueJ\lib\javafx-media-21.0.3-win.jar;C:\Program Files\BlueJ\lib\javafx-swing-21.0.3-win.jar;C:\Program Files\BlueJ\lib\javafx-web-21.0.3-win.jar;C:\Program Files\BlueJ\lib\junit-4.12.jar;C:\Program Files\BlueJ\lib\junit-jupiter-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-api-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-params-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-commons-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-engine-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-launcher-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-suite-api-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-vintage-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\opentest4j-1.2.0.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\javafx.web.jar;E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\javafx-base-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-base-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-controls-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-controls-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-fxml-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-fxml-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-graphics-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-graphics-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-media-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-media-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-swing-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-web-20.0.1-win.jar;C:\Program Files\BlueJ\lib\junit-4.12.jar;C:\Program Files\BlueJ\lib\junit-jupiter-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-api-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-params-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-commons-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-engine-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-launcher-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-suite-api-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-vintage-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\opentest4j-1.2.0.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\javafx.web.jar;C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP
 -d
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\doc
+C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP\doc
 -encoding
 UTF-8
 -charset
 UTF-8
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java
+C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP\EjecutableCliente.java
 <---- end of javadoc command ---->
-Loading source file E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java...
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: illegal start of type
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                    ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: ';' expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                        ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: <identifier> expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                                   ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: ';' expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                                           ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: <identifier> expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                                                    ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: <identifier> expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                                                     ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: <identifier> expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                                                                       ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:20: error: ';' expected
-    public Empleado((long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio))
-                                                                                                  ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:31: error: <identifier> expected
-    private void setApellido(p_apellido){
-                                       ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:34: error: <identifier> expected
-    private void setcuil(p_nombre){
-                                 ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:37: error: <identifier> expected
-    private void setApellido(p_cuil){
-                                   ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:40: error: <identifier> expected
-    private void setApellido(p_apellido){
-                                       ^
-E:\POO -- TPs -- Scetti-Varela\Segundo-TP\Seungo TP - Scetti Vera\Empleado.java:43: error: <identifier> expected
-    private void setApellido(p_apellido){
-                                       ^
-13 errors
+Loading source file C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP\EjecutableCliente.java...
+Constructing Javadoc information...
+Standard Doclet version 17.0.4.1+1
+Building tree for all the packages and classes...
+Generating C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP\doc\EjecutableCliente.html...
+Generating C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP\doc\package-summary.html...
+Generating C:\SANTI-ARCHIVOS\Santi\Licenciaura en sistemas de la información\POO\POO -- TPs -- Scetti-Varela\Segundo-TP\doc\index.html...

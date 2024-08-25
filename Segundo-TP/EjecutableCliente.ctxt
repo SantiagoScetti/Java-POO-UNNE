@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=EjecutableCliente
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ EjecutableCliente\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ {@code\ EjecutableCliente}\ contiene\ el\ m\u00E9todo\ {@code\ main}\ que\r\n\ demuestra\ el\ uso\ de\ la\ clase\ {@code\ Cliente}.\ Los\ datos\ de\ los\ clientes\ se\r\n\ ingresan\ como\ argumentos\ del\ m\u00E9todo\ {@code\ main}.\r\n\r\n\ @author\ Santi\r\n\ @version\ 1.0\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ El\ m\u00E9todo\ principal\ que\ se\ ejecuta\ al\ iniciar\ el\ programa.\ Los\ datos\ de\r\n\ los\ clientes\ se\ toman\ de\ los\ argumentos\ de\ l\u00EDnea\ de\ comandos.\r\n\r\n\ @param\ args\ Argumentos\ de\ l\u00EDnea\ de\ comandos\ donde\ cada\ cliente\ se\ define\r\n\ con\:\ DNI,\ nombre,\ apellido,\ saldo\ inicial.\r\n
 numComments=2

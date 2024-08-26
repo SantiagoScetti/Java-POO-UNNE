@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Circulo
-comment0.text=\r\n\ Punto\ 3\r\n\ \r\n\ @author\ Santi\ y\ Franco\r\n\ @version\ 1.0\r\n
+comment0.text=\r\n\ Punto\ 3\r\n\r\n\ @author\ Santi\ y\ Franco\r\n\ @version\ 1.0\r\n
 comment1.params=p_radio\ p_centro
 comment1.target=Circulo(double,\ Punto)
 comment1.text=\r\n\ Constructores\r\n

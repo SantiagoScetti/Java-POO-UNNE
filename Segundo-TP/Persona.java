@@ -35,32 +35,25 @@ public class Persona {
     private void setDNI(int p_dni) {
         this.nroDni = p_dni;
     }
-
     private void setNombre(String p_nombre) {
         this.nombre = p_nombre;
     }
-
     private void setApellido(String p_apellido) {
         this.apellido = p_apellido;
     }
-
     private void setAnioNacimiento(int p_anio) {
         this.anioNacimiento = p_anio;
     }
-
     //Getters
     public int getDNI() {
         return nroDni;
     }
-
     public String getNombre() {
         return nombre;
     }
-
     public String getApellido() {
         return apellido;
     }
-
     public int getAnioNacimiento() {
         return anioNacimiento;
     }

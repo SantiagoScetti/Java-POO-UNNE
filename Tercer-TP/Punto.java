@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class PuntoTP3 here.
+ * Ejercicio 2 (Punto)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Santi
+ * @version 1.0
  */
 public class Punto
 {
@@ -60,10 +60,6 @@ public class Punto
     }
     
     public double distanciaA(Punto p_ptoDistante){
-        return Math.sqrt(Math.pow(this.getX()- p_ptoDistante.getX(), 2) + Math.pow(this.getY() - p_ptoDistante.getY(), 2) );
-    }
-    
-    public double distanciaAA(Punto p_ptoDistante){
         double x1 = this.getX();
         double x2 = p_ptoDistante.getX();
         double y1 = this.getY();
@@ -71,8 +67,4 @@ public class Punto
         
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) );
     }
-    
-    
-    
-    
 }

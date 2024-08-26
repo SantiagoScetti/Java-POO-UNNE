@@ -1,15 +1,19 @@
 #BlueJ class context
 comment0.target=Persona
+comment0.text=\r\n\ La\ clase\ {@code\ Persona}\ representa\ una\ persona\ con\ atributos\ b\u00E1sicos\ como\r\n\ DNI,\ nombre,\ apellido\ y\ a\u00F1o\ de\ nacimiento.\ Proporciona\ m\u00E9todos\ para\ calcular\r\n\ la\ edad,\ as\u00ED\ como\ para\ obtener\ y\ mostrar\ la\ informaci\u00F3n\ de\ la\ persona.\r\n\r\n\ @author\ Santi\r\n\ @version\ 0.1\r\n
 comment1.params=p_dni\ p_nombre\ p_apellido\ p_anio
 comment1.target=Persona(int,\ java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ {@code\ Persona}.\r\n\r\n\ @param\ p_dni\ El\ n\u00FAmero\ de\ DNI\ de\ la\ persona.\r\n\ @param\ p_nombre\ El\ nombre\ de\ la\ persona.\r\n\ @param\ p_apellido\ El\ apellido\ de\ la\ persona.\r\n\ @param\ p_anio\ El\ a\u00F1o\ de\ nacimiento\ de\ la\ persona.\r\n
 comment10.params=
 comment10.target=int\ edad()
+comment10.text=\r\n\ Calcula\ la\ edad\ de\ la\ persona\ en\ a\u00F1os\ considerando\ la\ diferencia\ entre\r\n\ a\u00F1os.\r\n\r\n\ @return\ La\ edad\ de\ la\ persona\ en\ a\u00F1os.\r\n
 comment11.params=
 comment11.target=java.lang.String\ nomYApe()
 comment12.params=
 comment12.target=java.lang.String\ apeYNom()
 comment13.params=
 comment13.target=void\ mostrar()
+comment13.text=\r\n\ Muestra\ la\ informaci\u00F3n\ completa\ de\ la\ persona,\ incluyendo\ nombre,\r\n\ apellido,\ DNI\ y\ edad.\r\n
 comment2.params=p_dni
 comment2.target=void\ setDNI(int)
 comment3.params=p_nombre

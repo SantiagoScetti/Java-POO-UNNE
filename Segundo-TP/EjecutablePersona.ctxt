@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=EjecutablePersona
+comment0.text=\r\n\ La\ clase\ {@code\ EjecutablePersona}\ contiene\ el\ m\u00E9todo\ principal\ que\ crea\ instancias\ de\ la\ clase\ {@code\ Persona}\r\n\ y\ demuestra\ c\u00F3mo\ utilizar\ sus\ m\u00E9todos.\r\n\ \r\n\ @author\ Santi\r\n\ @version\ 1.0\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

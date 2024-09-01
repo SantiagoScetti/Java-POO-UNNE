@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=TestEmpleadoConJefe
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=empleado
+comment2.target=void\ emitirPermisoDeSalida(EmpleadoConJefe)
+comment2.text=\r\n\ Este\ m\u00E9todo\ emite\ un\ permiso\ de\ salida\ para\ un\ empleado.\r\n\ Si\ el\ empleado\ tiene\ un\ jefe,\ el\ permiso\ estar\u00E1\ firmado\ por\ el\ jefe.\r\n\ Si\ no\ tiene\ un\ jefe,\ indicar\u00E1\ que\ es\ el\ Gerente\ General.\r\n
+numComments=3

@@ -1,9 +1,9 @@
 import java.util.Scanner;
 /**
- * Write a description of class Banco here.
+ * Ejecurable para el punto "7" del TP 3
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Santiago
+ * @version 1.0
  */
 
 public class Banco {

@@ -42,7 +42,11 @@ public class Laboratorio {
      * @param p_telefono El teléfono del laboratorio.
      */
     public Laboratorio(String p_nombre, String p_domicilio, String p_telefono) {
-        this(p_nombre, p_domicilio, p_telefono, 0, 0); // Valores predeterminados para compra mínima y día de entrega.
+        this.setNombre(p_nombre);
+        this.setDomicilio(p_domicilio);
+        this.setTelefono(p_telefono);
+        this.setCompraMinima(0);
+        this.setDiaDeEntrega(0);
     }
 
      // Setters

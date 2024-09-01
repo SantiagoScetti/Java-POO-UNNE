@@ -95,7 +95,7 @@ public class Cliente {
      * DNI y saldo.
      */
     public void mostrar() {
-        System.out.println("Nombre y Apellido: " + nombre + apellido + "(" + nroDni + ")");
-        System.out.println("Saldo: $" + saldo);
+        System.out.println("Nombre y Apellido: " + getNombre() + getApellido() + "(" + getNroDni() + ")");
+        System.out.println("Saldo: $" + getSaldo());
     }
 }

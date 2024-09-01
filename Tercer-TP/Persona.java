@@ -12,7 +12,7 @@ public class Persona {
     private int nroDni;
     private String nombre;
     private String apellido;
-    private int anioNacimiento;
+    private Calendar fechaNacimiento;
 
     /**
      * Constructor de la clase {@code Persona}.
@@ -28,6 +28,13 @@ public class Persona {
         this.setApellido(p_apellido);
         this.setAnioNacimiento(p_anio);
     }
+    public Persona(int p_dni, String p_nombre, String p_apellido, Calendar p_anio) {
+        this.setDNI(p_dni);
+        this.setNombre(p_nombre);
+        this.setApellido(p_apellido);
+        this.setFechaNacimiento(p_anio);
+    }
+
 
     //Setters
     private void setDNI(int p_dni) {
@@ -40,7 +47,11 @@ public class Persona {
         this.apellido = p_apellido;
     }
     private void setAnioNacimiento(int p_anio) {
-        this.anioNacimiento = p_anio;
+        fechaNacimiento = new GregorianCalendar();
+        this.fechaNacimiento.set(1, p_anio); 
+    }
+    private void setFechaNacimiento(Calendar calendario) {
+        this.fechaNacimiento = calendario;
     }
     //Getters
     public int getDNI() {
@@ -52,11 +63,10 @@ public class Persona {
     public String getApellido() {
         return apellido;
     }
-    public int getAnioNacimiento() {
-        return anioNacimiento;
+    public Calendar getAnioNacimiento() {
+        return fechaNacimiento;
     }
-
-    // METODOS
+    
     /**
      * Calcula la edad de la persona en años considerando la diferencia entre
      * años.
@@ -66,7 +76,7 @@ public class Persona {
     public int edad() {
         Calendar fechahoy = new GregorianCalendar();
         int aniohoy = fechahoy.get(Calendar.YEAR);
-        return aniohoy - anioNacimiento;
+        return aniohoy - getAnioNacimiento().YEAR;
     }
 
     public String nomYApe() {

@@ -9,12 +9,13 @@ import java.util.GregorianCalendar;
 
 public class EmpleadoConJefe {  
     // Variables de instancia
+    private EmpleadoConJefe jefe;
     private long cuil; 
     private String apellido;
     private String nombre;
     private double sueldoBasico;
     private Calendar fechaIngreso;
-    private EmpleadoConJefe jefe;
+    
     /**
      * Constructor for objects of class EmpleadoConJefe
      */

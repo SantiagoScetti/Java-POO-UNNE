@@ -6,10 +6,10 @@
  * @version 1.0
  */
 public class Circulo {
-
     // variables de instancia
-    private double radio;
     private Punto centro;
+    private double radio;
+    
 
     /**
      * Constructores

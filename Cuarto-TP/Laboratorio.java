@@ -1,20 +1,15 @@
-
 /**Punto2 del tp 2
  * 
  * @author Santi & Franco
  * @version 1.0
  */
-
 public class Laboratorio {
 
-    
     private String nombre;
     private String domicilio; 
     private String telefono; 
     private int compraMinima;
     private int diaDeEntrega;
-
-
 
     public Laboratorio(String p_nombre, String p_domicilio , String p_telefono ,  int p_compraMin, int p_diaEnt ){
         setNombre(p_nombre);

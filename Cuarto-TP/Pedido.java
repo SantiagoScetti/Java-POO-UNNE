@@ -27,9 +27,13 @@ public class Pedido
     public Pedido(Calendar p_fecha, Cliente p_cliente, Producto p_producto){
         this.setFecha(p_fecha);
         this.setCliente(p_cliente);
-
-        this.productos = new ArrayList<>();
-        this.productos.add(p_producto);
+        this.setProducto(p_producto);
+        
+    }
+    public Pedido(Calendar p_fecha, Cliente p_cliente){
+        this.setFecha(p_fecha);
+        this.setCliente(p_cliente);
+        this.setProductos(new ArrayList());
     }
 
     //SETTERS
@@ -42,6 +46,11 @@ public class Pedido
     private void setProductos(ArrayList<Producto> p_productos) {
         this.productos = p_productos;
     }
+    private void setProducto(Producto p_producto){
+        this.productos = new ArrayList<>();
+        this.productos.add(p_producto);
+    }
+    
     
     //GETTES
     public  Calendar getFecha(){

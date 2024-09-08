@@ -38,7 +38,8 @@ public class Secretaria {
 
         // Crear una instancia de Docente
         Docente docente = new Docente(nombreDocente, gradoDocente, sueldoBasico, asignacionFamiliar);
-
+        
+       
         // Emitir el recibo
         escuela.imprimirRecibo(docente);
     }

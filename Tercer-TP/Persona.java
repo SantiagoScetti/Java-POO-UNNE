@@ -1,5 +1,6 @@
-
 import java.util.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * La clase {@code Persona} se reutiliza del TP2
@@ -76,7 +77,21 @@ public class Persona {
     public int edad() {
         Calendar fechahoy = new GregorianCalendar();
         int aniohoy = fechahoy.get(Calendar.YEAR);
-        return aniohoy - getAnioNacimiento().YEAR;
+        int meshoy = fechahoy.get(Calendar.MONTH);
+        int diahoy = fechahoy.get(Calendar.DATE);
+        
+        int anioNacimiento = this.getAnioNacimiento().get(Calendar.YEAR);
+        int mesNacimiento = this.getAnioNacimiento().get(Calendar.MONTH);
+        int diaNacimiento = this.getAnioNacimiento().get(Calendar.DATE);
+        
+        int edad = aniohoy - anioNacimiento;
+        
+        if(mesNacimiento > meshoy || (mesNacimiento == meshoy && diaNacimiento > diahoy)){
+            edad--;
+        }
+        
+        
+        return edad;
     }
 
     public String nomYApe() {
@@ -96,5 +111,13 @@ public class Persona {
         System.out.println("DNI: " + nroDni);
         System.out.println("Edad: " + edad());
     }
-
-}
+    
+    public boolean esCumpleaños(){
+        Calendar hoy = new GregorianCalendar();
+        if((hoy.get(Calendar.DATE) == this.getAnioNacimiento().get(Calendar.DATE)) && (hoy.get(Calendar.MONTH) == this.getAnioNacimiento().get(Calendar.MONTH)) ){
+            return true;
+        }
+        return false;
+    }
+        
+    }

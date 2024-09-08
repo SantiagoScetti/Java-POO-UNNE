@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 /**
  * Ejecurable para el punto "7" del TP 3
  * 
@@ -9,43 +12,47 @@ import java.util.Scanner;
 public class Banco {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        // Ingreso de datos para la clase Persona
+        System.out.print("Ingrese el número de DNI: ");
+        int dni = scanner.nextInt();
+        scanner.nextLine(); // Consumir la nueva línea
+
+        System.out.print("Ingrese el nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese el apellido: ");
+        String apellido = scanner.nextLine();
+
+        System.out.print("Ingrese el dia de nacimiento: ");
+        int dia = scanner.nextInt();
+         System.out.print("Ingrese el mes de nacimiento: ");
+        int mes = scanner.nextInt();
+         System.out.print("Ingrese el año de nacimiento: ");
+        int anio = scanner.nextInt();
+    
+        Calendar anioNacimiento = new GregorianCalendar(anio, mes-1, dia);
+        //anioNacimiento.set(dia, mes, anio);
+       
+        // Ingreso de datos para la clase CuentaBancaria
+        System.out.print("Ingrese el número de cuenta: ");
+        int nroCuenta = scanner.nextInt();
+
+        System.out.print("Ingrese el saldo inicial: ");
+        double saldo = scanner.nextDouble();
         
-        // Crear un objeto Persona (titular de las cuentas)
-        Persona titular = new Persona(43752065, "Santaigo Adrian", "Scetti", 2001); 
+         // Crear objeto Persona
+        Persona titular = new Persona(dni, nombre, apellido, anioNacimiento);
+        // Crear objeto CuentaBancaria
+        CuentaBancaria cuentaBancaria = new CuentaBancaria(nroCuenta, titular, saldo);
         
-        // Crear una Caja de Ahorro y una Cuenta Corriente para el mismo titular
-        CajaDeAhorro cajaDeAhorro = new CajaDeAhorro(2135, titular);
-        CuentaCorriente cuentaCorriente = new CuentaCorriente(1735, titular);
         
-        // Realizar operaciones en la Caja de Ahorro
-        System.out.println("Depósito en Caja de Ahorro: $1000");
-        cajaDeAhorro.depositar(1000);
-        
-        System.out.println("Extracción en Caja de Ahorro: $500");
-        cajaDeAhorro.extraer(500);
-        
-        System.out.println("Extracción en Caja de Ahorro: $600");
-        cajaDeAhorro.extraer(600); // Debería fallar porque el saldo es insuficiente
-        
-        System.out.println("Extracción en Caja de Ahorro: $400");
-        cajaDeAhorro.extraer(400); // Debería funcionar
-        
-        // Mostrar estado final de la Caja de Ahorro
-        cajaDeAhorro.mostrar();
-        
-        // Realizar operaciones en la Cuenta Corriente
-        System.out.println("\nDepósito en Cuenta Corriente: $2000");
-        cuentaCorriente.depositar(2000);
-        
-        System.out.println("Extracción en Cuenta Corriente: $2500");
-        cuentaCorriente.extraer(2500); // Debería funcionar porque tiene descubierto
-        
-        System.out.println("Extracción en Cuenta Corriente: $100");
-        cuentaCorriente.extraer(100);
-        
-        // Mostrar estado final de la Cuenta Corriente
-        cuentaCorriente.mostrar();
-        
+        if (titular.esCumpleaños()){
+            System.out.println("Feliz cumpleaños. Banco siempre con vos :)");
+        }
+        // Mostrar información de la cuenta bancaria
+        cuentaBancaria.mostrar();
+
         scanner.close();
     }
 }

@@ -23,6 +23,7 @@ public class CuentaBancaria{
     public CuentaBancaria(int p_nroCuenta, Persona p_titular) {
         setNroCuenta(p_nroCuenta);
         setTitular(p_titular);
+        setSaldo(0);
     }
 
     //SETTERS

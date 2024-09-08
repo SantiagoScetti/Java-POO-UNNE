@@ -21,7 +21,7 @@ public class TomaPedido {
         Producto prod3 = new Producto(3, "Revistas", "Revista-user", 5500, 5.0, 20, lab1);
 
         // Crear instancia de Cliente
-        Cliente cliente = new Cliente("Juan Pérez");
+        Cliente cliente = new Cliente(44587744, "Juan", "Pérez", 1500);
 
         // Crear una lista de productos y agregar productos
         ArrayList<Producto> productosIniciales = new ArrayList<>();

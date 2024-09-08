@@ -142,11 +142,11 @@ public class RegistroCivil {
     }
     
     private void casarse() {
-        mostrarPersonas("Hombres", hombres);
+        mostrarHombres(hombres);
         System.out.print("Seleccione el índice del hombre para casar: ");
         Hombre hombre = seleccionarPersona(hombres);
         
-        mostrarPersonas("Mujeres", mujeres);
+        mostrarMujeres(mujeres);
         System.out.print("Seleccione el índice de la mujer para casar: ");
         Mujer mujer = seleccionarPersona(mujeres);
         
@@ -164,7 +164,7 @@ public class RegistroCivil {
         int opcion = obtenerOpcion();
     
         if (opcion == 1) {
-            mostrarPersonas("Hombres", hombres);
+            mostrarHombres(hombres);
             System.out.print("Seleccione el índice del hombre para divorciar: ");
             int index = obtenerOpcion();
             if (index >= 0 && index < hombres.length && hombres[index] != null) {
@@ -174,7 +174,7 @@ public class RegistroCivil {
                 System.out.println("Índice inválido.");
             }
         } else if (opcion == 2) {
-            mostrarPersonas("Mujeres", mujeres);
+            mostrarMujeres(mujeres);
             System.out.print("Seleccione el índice de la mujer para divorciar: ");
             int index = obtenerOpcion();
             if (index >= 0 && index < mujeres.length && mujeres[index] != null) {
@@ -217,22 +217,27 @@ public class RegistroCivil {
 
     private void mostrarRegistro() {
         System.out.println("***** Registro de Personas *****");
-        mostrarPersonas("Hombres", hombres);
-        mostrarPersonas("Mujeres", mujeres);
+        mostrarHombres(hombres);
+        mostrarMujeres(mujeres);
     }
 
-    private <T> void mostrarPersonas(String tipo, T[] lista) {
-        System.out.println("Listado de " + tipo + ":");
+    private void mostrarHombres(Hombre[] lista) {
+        System.out.println("Listado de Hombres");
         for (int i = 0; i < lista.length; i++) {
             if (lista[i] != null) {
-                if (lista[i] instanceof Hombre) {
                     System.out.println(i + ". " + ((Hombre) lista[i]).datos());
-                } else if (lista[i] instanceof Mujer) {
+                }
+            }
+        }
+    private void mostrarMujeres(Mujer[] lista) {
+        System.out.println("Listado de Mujeres");
+        for (int i = 0; i < lista.length; i++) {
+            if (lista[i] != null) {
                     System.out.println(i + ". " + ((Mujer) lista[i]).datos());
                 }
             }
         }
-    }
+    
 
     private <T> T seleccionarPersona(T[] lista) {
         int index = obtenerOpcion();

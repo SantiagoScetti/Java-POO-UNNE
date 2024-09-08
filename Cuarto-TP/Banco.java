@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Write a description of class Banco here.
@@ -25,21 +24,23 @@ public class Banco
         this.setLocalidad(p_localidad);
         this.setNroSucursal(p_nroSucursal);
         this.setEmpleados(p_empleados);
+        this.setCuentasBancarias(new ArrayList<CuentaBancaria>()); 
     }
 
     public Banco(String p_nombre, Localidad p_localidad, int p_nroSucursal, Empleado p_empleado) {
         this.setNombre(p_nombre);
         this.setLocalidad(p_localidad);
         this.setNroSucursal(p_nroSucursal);
-        this.setEmpleados(new ArrayList<>());
+        this.setEmpleados(new ArrayList<Empleado>());
         this.empleados.add(p_empleado); 
+        this.setCuentasBancarias(new ArrayList<CuentaBancaria>()); 
     }
-    public Banco(String p_nombre, Localidad p_localidad, int p_nroSucursal, ArrayList p_empleados, ArrayList p_cuentas){
+    public Banco(String p_nombre, Localidad p_localidad, int p_nroSucursal, ArrayList<Empleado> p_empleados, ArrayList<CuentaBancaria> p_cuentas){
         this.setNombre(p_nombre);
         this.setLocalidad(p_localidad);
         this.setNroSucursal(p_nroSucursal);
         this.setEmpleados(p_empleados);
-        setCuentasBancarisa(p_cuentas);
+        this.setCuentasBancarias(p_cuentas);
     }
 
     // SETTERS
@@ -55,7 +56,7 @@ public class Banco
     private void setEmpleados(ArrayList<Empleado> p_empleados) {
         this.empleados = p_empleados;
     }
-    private void setCuentasBancarisa(ArrayList<CuentaBancaria> p_cuentas) {
+    private void setCuentasBancarias(ArrayList<CuentaBancaria> p_cuentas) {
         this.cuentasBancarias = p_cuentas;
     }
 
@@ -80,20 +81,11 @@ public class Banco
     //METODOS
 
     public boolean agregarEmpleado(Empleado p_empleado) {
-        if (p_empleado != null) {
-            empleados.add(p_empleado);  // Agrega el empleado a la lista
-            return true;  //fue agregado exitosamente
-        }
-        return false;  //no se pudo agregar el empleado
+        return empleados.add(p_empleado);  
     }
 
-   
     public boolean quitarEmpleado(Empleado p_empleado) {
-        if (p_empleado != null && empleados.contains(p_empleado)) {  // Verifica que el empleado no sea nulo y esté en la lista
-            empleados.remove(p_empleado);  // Quita el empleado de la lista
-            return true;  //eliminado exitosamente
-        }
-        return false;  //no se pudo eliminar el empleado
+        return empleados.remove(p_empleado);
     }
 
 
@@ -101,7 +93,6 @@ public class Banco
         for (Empleado empleado : empleados) {
              System.out.printf("%-15s %-15s %-30s $%-15.2f%n", empleado.getCuil(), empleado.apeYNom(), "-----------------------", empleado.getSueldoBasico());
         }
-       
     }
 
     public double sueldosAPagar(){
@@ -129,50 +120,84 @@ public class Banco
     }
 
     public boolean agregarCuentaBancaria(CuentaBancaria p_cuenta){
-         if (p_cuenta != null) {
-            cuentasBancarias.add(p_cuenta);  
-            return true;  //fue agregada exitosamente
-        }
-        return false;  //no se pudo agregar la cuenta
+        return cuentasBancarias.add(p_cuenta);     
     }
     public boolean quitarCuentaBancaria(CuentaBancaria p_cuenta){
-         if (p_cuenta != null && cuentasBancarias.contains(p_cuenta)) {  
-            cuentasBancarias.remove(p_cuenta);  
-            return true;  
-        }
-        return false;
+        return cuentasBancarias.remove(p_cuenta);      
     }
 
     public void listarCuentasConSaldoCero(){
-        System.out.printf("Cuentas sin saldo: " );
-        System.out.printf("%20s $%20s", 
+        System.out.println("Cuentas sin saldo:");
+        System.out.printf("%20s %30s%n", 
                     "--- Cuenta --------------------", 
-                    "Apellido y Nombre ---------------");
-
-        for (CuentaBancaria cuentaBancaria : cuentasBancarias) {
-            if(cuentaBancaria.getSaldo() == 0){
-                System.out.printf("%20s $%20s", 
-                                cuentaBancaria.getNroCuenta(), 
-                                cuentaBancaria.getTitular().apeYNom());
+                            "Apellido y Nombre ---------------");
+    
+        for (CuentaBancaria unacuenta : this.getCuentasBancarias()) {
+            if (unacuenta != null && unacuenta.getSaldo() == 0) {
+                System.out.printf("%20s %20s%n", 
+                                    unacuenta.getNroCuenta(), 
+                                    unacuenta.getTitular().apeYNom());
             }
         }
     }
 
-    public  HashSet<Persona> listaDeTitulares(){
-        Set<Persona> listaDeTitulares = new HashSet<>();
 
+    public  HashSet<Persona> listaDeTitulares(){
+        HashSet<Persona> lista = new HashSet<>();
         
+        for (CuentaBancaria unacuenta : cuentasBancarias) {
+            lista.add(unacuenta.getTitular());
+        }
+        
+        return lista;
     }
 
     private int cuentasSaldoActivo(){
-        // Activo = totales - saldoCero
-        for (int i = 0; i < cuentasBancarias.size(); i++) {
-            
+        // Activo = totales - saldoCero   || activo = for loop (unaCuenta.getSaldo() > 0)   averiguar cual es más rápido
+        int contador = 0;
+
+        for (CuentaBancaria unaCuenta : this.getCuentasBancarias()) {
+            if(unaCuenta.getSaldo() > 0){
+               contador ++;
+            }
         }
-
+        return contador;
     }
 
-    public void mostrarResumen(){
-
+    public void mostrarResumen() {
+        // Cabecera con información del banco y sucursal
+        System.out.printf("Banco: %s  -  Sucursal: %d%n", this.getNombre(), this.getNroSucursal());
+        System.out.printf("Localidad: %s       Provincia: %s%n", this.getLocalidad().getNombre(), this.getLocalidad().getProvincia());
+        System.out.println("************************************************************");
+        System.out.println("RESUMEN DE CUENTAS BANCARIAS");
+        System.out.println("************************************************************");
+        
+        // Número total de cuentas, cuentas activas, y cuentas con saldo cero
+        int totalCuentas = this.getCuentasBancarias().size();
+        int cuentasActivas = cuentasSaldoActivo();
+        int cuentasSaldoCero = totalCuentas - cuentasActivas;
+        
+        System.out.printf("Número total de Cuentas Bancarias: %d%n", this.getCuentasBancarias().size());
+        System.out.printf("Cuentas Activas: %6d%n", cuentasSaldoActivo());
+        System.out.printf("Cuentas Saldo Cero: %d.%n", cuentasSaldoCero);
+        
+        // Separador
+        System.out.println("-------------------------------------------------------------------------------------------");
+        
+        // Cuentas sin saldo
+        listarCuentasConSaldoCero();
+    
+        System.out.println("----------------------------------------------------------------------------------------------------");
+        
+        // Listado de clientes
+        System.out.print("Listado de Clientes: ");
+        HashSet<Persona> listaTitulares = listaDeTitulares();
+        for (Persona titular : listaTitulares) {
+            System.out.print(titular.apeYNom() + "; ");
+        }
+        
+        System.out.println(" ");
+        System.out.println("----------------------------------------------------------------------------------------------------");
     }
+    
 }

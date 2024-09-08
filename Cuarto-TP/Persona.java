@@ -76,7 +76,7 @@ public class Persona {
     public int edad() {
         Calendar fechahoy = new GregorianCalendar();
         int aniohoy = fechahoy.get(Calendar.YEAR);
-        return aniohoy - getAnioNacimiento().YEAR;
+        return aniohoy - getAnioNacimiento().get(Calendar.YEAR);
     }
 
     public String nomYApe() {

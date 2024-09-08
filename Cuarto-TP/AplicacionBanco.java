@@ -22,7 +22,26 @@ public class AplicacionBanco {
         // Crear el banco
         Banco banco = new Banco("RIO", localidad, 3, listaEmpleados);
         
+        // Crear personas
+        Persona persona1 = new Persona(4445558, "santi","scetti", 2001);
+        Persona persona2 = new Persona(4588756, "franco","varela", 2002);
+        
+        // Crear cuentas bancarias
+        CuentaBancaria cuenta1 = new CuentaBancaria(12387, persona1,15000);
+        CuentaBancaria cuenta2 = new CuentaBancaria(23196, persona2);
+        
+        // Agregar cuentas bancarias al banco
+        banco.agregarCuentaBancaria(cuenta1);
+        banco.agregarCuentaBancaria(cuenta2);
+        
         // Mostrar la información del banco y los sueldos
-        banco.mostrar();
+        banco.mostrarResumen();
+        
+        ArrayList<CuentaBancaria> cuentasBc = new ArrayList<>();
+        cuentasBc.add(cuenta1);
+        cuentasBc.add(cuenta2);
+        
+        Banco banco2 = new Banco("Laguna", localidad, 1, listaEmpleados, cuentasBc);
+        banco2.mostrarResumen();
     }
 }

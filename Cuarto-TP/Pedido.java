@@ -5,7 +5,7 @@ import java.util.Calendar;
 /**
  * Punto 2 TP4
  * 
- * @author Santiago
+ * @author Santiago y Franco
  * @version 1.0
  */
 public class Pedido
@@ -18,10 +18,10 @@ public class Pedido
     /**
      * Constructores
      */
-    public Pedido(Calendar p_fecha, Cliente p_cliente, ArrayList p_productos){
-        this.setFecha(p_fecha);
-        this.setCliente(p_cliente);
-        this.setProductos(p_productos);
+    public Pedido(Calendar p_fecha, Cliente p_cliente, ArrayList<Producto> p_productos){
+      this.setFecha(p_fecha);
+      this.setCliente(p_cliente);
+      this.setProductos(p_productos);
     }
 
     public Pedido(Calendar p_fecha, Cliente p_cliente, Producto p_producto){
@@ -33,7 +33,7 @@ public class Pedido
     public Pedido(Calendar p_fecha, Cliente p_cliente){
         this.setFecha(p_fecha);
         this.setCliente(p_cliente);
-        this.setProductos(new ArrayList());
+        this.setProductos(new ArrayList<Producto>());
     }
 
     //SETTERS
@@ -47,7 +47,7 @@ public class Pedido
         this.productos = p_productos;
     }
     private void setProducto(Producto p_producto){
-        this.productos = new ArrayList<>();
+        this.productos = new ArrayList<Producto>();
         this.productos.add(p_producto);
     }
     
@@ -63,7 +63,14 @@ public class Pedido
         return this.productos;
     }
     
-
+    // Método para agregar un producto
+    public boolean agregarProducto(Producto p_producto) {
+            return getProductos().add(p_producto);
+    }
+    // Método para quitar un producto
+    public boolean quitarProducto(Producto p_producto) {
+        return getProductos().remove(p_producto);  
+    }
 
     //METODOS
 
@@ -83,23 +90,9 @@ public class Pedido
         return total;
     }
 
-    // Método para agregar un producto
-    public boolean agregarProducto(Producto p_producto) {
-        if (p_producto != null) {
-            productos.add(p_producto);
-            return true; // Producto agregado con éxito
-        }
-        return false; // Producto nulo, no se puede agregar
-    }
+    
 
-    // Método para quitar un producto
-    public boolean quitarProducto(Producto p_producto) {
-        if (p_producto != null && productos.contains(p_producto)) {  // Intentamos eliminar el primer producto encontrado
-            productos.remove(p_producto);
-            return true; // Producto eliminado con éxito
-        }
-        return false; // Producto no encontrado en la lista o nulo
-    }
+    
 
     public void mostrarPedido() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");

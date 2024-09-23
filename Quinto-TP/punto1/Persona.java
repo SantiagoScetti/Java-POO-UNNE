@@ -1,5 +1,7 @@
+package punto1;
 
-import java.util.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * La clase {@code Persona} se reutiliza del TP2
@@ -80,7 +82,7 @@ public class Persona {
     }
 
     public String nomYApe() {
-        return this.getNombre() + this.getApellido();
+        return this.getNombre() + ", " +  this.getApellido();
     }
 
     public String apeYNom() {

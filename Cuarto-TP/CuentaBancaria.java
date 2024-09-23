@@ -62,11 +62,11 @@ public class CuentaBancaria{
      */
     public double depositar(double p_importe) {
         if (p_importe > 0) {
-            setSaldo(getSaldo() + p_importe);
+            this.setSaldo(this.getSaldo() + p_importe);
         } else {
             System.out.println("Error: El importe a depositar debe ser positivo.");
         }
-        return getSaldo();
+        return this.getSaldo();
     }
 
     /**
@@ -78,15 +78,15 @@ public class CuentaBancaria{
      */
     public double extraer(double p_importe) {
         if (p_importe > 0) {
-            if (getSaldo() >= p_importe) {
-                setSaldo(getSaldo() - p_importe);
+            if (this.getSaldo() >= p_importe) {
+                this.setSaldo(this.getSaldo() - p_importe);
             } else {
                 System.out.println("Error: Saldo insuficiente.");
             }
         } else {
             System.out.println("Error: El importe a extraer debe ser positivo.");
         }
-        return getSaldo();
+        return this.getSaldo();
     }
 
     /**
@@ -95,8 +95,8 @@ public class CuentaBancaria{
      */
     public void mostrar() {
         System.out.println("- Cuenta Bancaria -");
-        System.out.println("Titular: " + getTitular().getNombre() + " (" + getTitular().edad() + " años)");
-        System.out.println("Saldo: " + getSaldo());
+        System.out.println("Titular: " + this.getTitular().getNombre() + " (" + this.getTitular().edad() + " años)");
+        System.out.println("Saldo: " + this.getSaldo());
     }
 
     /**
@@ -104,6 +104,6 @@ public class CuentaBancaria{
      * titular, saldo) tabulados.
      */
     public String toString() {
-        return getNroCuenta() + "\t" + getTitular().getNombre() + "\t" + getSaldo();
+        return this.getNroCuenta() + "\t" + this.getTitular().getNombre() + "\t" + this.getSaldo();
     }
 }

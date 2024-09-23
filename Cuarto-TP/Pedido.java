@@ -27,8 +27,8 @@ public class Pedido
     public Pedido(Calendar p_fecha, Cliente p_cliente, Producto p_producto){
         this.setFecha(p_fecha);
         this.setCliente(p_cliente);
-        this.setProducto(p_producto);
-        
+        this.setProductos(new ArrayList<Producto>());
+        this.agregarProducto(p_producto);
     }
     public Pedido(Calendar p_fecha, Cliente p_cliente){
         this.setFecha(p_fecha);
@@ -46,11 +46,6 @@ public class Pedido
     private void setProductos(ArrayList<Producto> p_productos) {
         this.productos = p_productos;
     }
-    private void setProducto(Producto p_producto){
-        this.productos = new ArrayList<Producto>();
-        this.productos.add(p_producto);
-    }
-    
     
     //GETTES
     public  Calendar getFecha(){
@@ -65,35 +60,32 @@ public class Pedido
     
     // Método para agregar un producto
     public boolean agregarProducto(Producto p_producto) {
-            return getProductos().add(p_producto);
+            return this.getProductos().add(p_producto);
     }
     // Método para quitar un producto
     public boolean quitarProducto(Producto p_producto) {
-        return getProductos().remove(p_producto);  
+        return this.getProductos().remove(p_producto);  
     }
 
     //METODOS
 
     public double totalAlContado(){
         double total = 0;
-        for (int i = 0; i < productos.size(); i++) {
-            total += productos.get(i).precioContado();
+        for (int i = 0; i < this.getProductos().size(); i++) {
+            total += this.getProductos().get(i).precioContado();
         }
         return total;
     }
 
     public  double totalFinanciado(){
         double total = 0;
-        for (int i = 0; i < productos.size(); i++) {
-            total += productos.get(i).precioLista(); 
+        for (int i = 0; i < this.getProductos().size(); i++) {
+            total += this.getProductos().get(i).precioLista(); 
         }
         return total;
     }
 
     
-
-    
-
     public void mostrarPedido() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
         String fechaStr = sdf.format(getFecha().getTime());
@@ -102,11 +94,11 @@ public class Pedido
         System.out.printf("%-25s %-15s %-15s%n", "Producto", "Precio Lista", "Precio Contado");
         System.out.println("---------------------------------------------------------------");
 
-        for (Producto producto : productos) {
+        for (Producto unProducto : this.getProductos()) {
             System.out.printf("%-25s %-15.2f %-15.2f%n",
-                    producto.getDescripcion(),
-                    producto.precioLista(),
-                    producto.precioContado());
+                    unProducto.getDescripcion(),
+                    unProducto.precioLista(),
+                    unProducto.precioContado());
         }
 
         System.out.println("---------------------------------------------------------------");

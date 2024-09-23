@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Banco
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Banco\ here.\r\n\ \r\n\ @author\ santi\r\n\ @version\ 1.0\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Banco\ here.\r\n\ \r\n\ @author\ santi\ y\ franco\r\n\ @version\ 2.0(RENOVADO)\r\n
 comment1.params=p_nombre\ p_localidad\ p_nroSucursal\ p_empleados
 comment1.target=Banco(java.lang.String,\ Localidad,\ int,\ java.util.ArrayList)
 comment1.text=\r\n\ Constructores\r\n

@@ -4,8 +4,8 @@ import java.util.HashSet;
 /**
  * Write a description of class Banco here.
  * 
- * @author santi
- * @version 1.0
+ * @author santi y franco
+ * @version 2.0(RENOVADO)
  */
 public class Banco
 {
@@ -32,7 +32,7 @@ public class Banco
         this.setLocalidad(p_localidad);
         this.setNroSucursal(p_nroSucursal);
         this.setEmpleados(new ArrayList<Empleado>());
-        this.empleados.add(p_empleado); 
+        this.agregarEmpleado(p_empleado); 
         this.setCuentasBancarias(new ArrayList<CuentaBancaria>()); 
     }
     public Banco(String p_nombre, Localidad p_localidad, int p_nroSucursal, ArrayList<Empleado> p_empleados, ArrayList<CuentaBancaria> p_cuentas){
@@ -81,23 +81,23 @@ public class Banco
     //METODOS
 
     public boolean agregarEmpleado(Empleado p_empleado) {
-        return empleados.add(p_empleado);  
+        return this.getEmpleados().add(p_empleado);  
     }
 
     public boolean quitarEmpleado(Empleado p_empleado) {
-        return empleados.remove(p_empleado);
+        return this.getEmpleados().remove(p_empleado);
     }
 
 
     public void listarSueldos(){
-        for (Empleado empleado : empleados) {
-             System.out.printf("%-15s %-15s %-30s $%-15.2f%n", empleado.getCuil(), empleado.apeYNom(), "-----------------------", empleado.getSueldoBasico());
+        for (Empleado empleado : this.getEmpleados()) {
+            empleado.mostrarLinea();
         }
     }
 
     public double sueldosAPagar(){
         double total = 0;
-         for (Empleado empleado : empleados) {
+         for (Empleado empleado : this.getEmpleados()) {
             total += empleado.getSueldoBasico();
          }
         return total;
@@ -110,7 +110,7 @@ public class Banco
 
         // Imprime la cabecera de los empleados
         System.out.println("---------------------------------------------------------------------");
-        listarSueldos();
+        this.listarSueldos();
 
         // Imprime el total a pagar
         System.out.println("---------------------------------------------------------------------");
@@ -120,10 +120,10 @@ public class Banco
     }
 
     public boolean agregarCuentaBancaria(CuentaBancaria p_cuenta){
-        return cuentasBancarias.add(p_cuenta);     
+        return this.getCuentasBancarias().add(p_cuenta);     
     }
     public boolean quitarCuentaBancaria(CuentaBancaria p_cuenta){
-        return cuentasBancarias.remove(p_cuenta);      
+        return this.getCuentasBancarias().remove(p_cuenta);      
     }
 
     public void listarCuentasConSaldoCero(){
@@ -145,7 +145,7 @@ public class Banco
     public  HashSet<Persona> listaDeTitulares(){
         HashSet<Persona> lista = new HashSet<>();
         
-        for (CuentaBancaria unacuenta : cuentasBancarias) {
+        for (CuentaBancaria unacuenta : this.getCuentasBancarias()) {
             lista.add(unacuenta.getTitular());
         }
         
@@ -174,24 +174,24 @@ public class Banco
         
         // Número total de cuentas, cuentas activas, y cuentas con saldo cero
         int totalCuentas = this.getCuentasBancarias().size();
-        int cuentasActivas = cuentasSaldoActivo();
+        int cuentasActivas = this.cuentasSaldoActivo();
         int cuentasSaldoCero = totalCuentas - cuentasActivas;
         
         System.out.printf("Número total de Cuentas Bancarias: %d%n", this.getCuentasBancarias().size());
-        System.out.printf("Cuentas Activas: %6d%n", cuentasSaldoActivo());
+        System.out.printf("Cuentas Activas: %6d%n", this.cuentasSaldoActivo());
         System.out.printf("Cuentas Saldo Cero: %d.%n", cuentasSaldoCero);
         
         // Separador
         System.out.println("-------------------------------------------------------------------------------------------");
         
         // Cuentas sin saldo
-        listarCuentasConSaldoCero();
+        this.listarCuentasConSaldoCero();
     
         System.out.println("----------------------------------------------------------------------------------------------------");
         
         // Listado de clientes
         System.out.print("Listado de Clientes: ");
-        HashSet<Persona> listaTitulares = listaDeTitulares();
+        HashSet<Persona> listaTitulares = this.listaDeTitulares();
         for (Persona titular : listaTitulares) {
             System.out.print(titular.apeYNom() + "; ");
         }

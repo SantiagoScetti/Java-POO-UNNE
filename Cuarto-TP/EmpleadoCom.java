@@ -1,21 +1,14 @@
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
- * La clase {@code Empleado} representa a un empleado en una empresa. Permite
- * calcular el sueldo neto del empleado, incluyendo adicionales y descuentos.
- *
- *  Viene del tp3
- *
- * @author Santiago
- * @version 1.0
+ * Write a description of class EmpleadoCom here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-
-public class Empleado {
-
-
-
+public class EmpleadoCom
+{
     // instance variable
     private long cuil;
     private String apellido;
@@ -32,7 +25,7 @@ public class Empleado {
      * @param p_importe El sueldo básico del empleado.
      * @param p_anio El año de ingreso del empleado a la empresa.
      */
-    public Empleado(long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio) {
+    public EmpleadoCom(long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio) {
         // initialise instance variables
         this.setApellido(p_apellido);
         this.setNombre(p_nombre);
@@ -40,7 +33,7 @@ public class Empleado {
         this.setSueldoBasico(p_importe);
         this.setAnio(p_anio);
     }
-     public Empleado(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha) {
+     public EmpleadoCom(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha) {
         // initialise instance variables
         this.setApellido(p_apellido);
         this.setNombre(p_nombre);
@@ -112,7 +105,7 @@ public class Empleado {
     private double adicional() {
         if (this.antiguedad() < 2) {
             return this.getSueldoBasico() * 0.02;
-        } else if (this.antiguedad() >= 2 && antiguedad() < 10) {
+        } else if (this.antiguedad() >= 2 && this.antiguedad() < 10) {
             return this.getSueldoBasico() * 0.04;
         } else {
             return this.getSueldoBasico() * 0.06;
@@ -141,7 +134,7 @@ public class Empleado {
      */
     public void mostrar() {
         System.out.printf("Nombre y Apellido: %s\n", this.nomYApe());
-        System.out.printf("CUIL: %d Antigüedad: %d años de servicio\n",this.getCuil(), this.antiguedad());
+        System.out.printf("CUIL: %d Antigüedad: %d años de servicio\n", this.getCuil(), this.antiguedad());
         System.out.printf("Sueldo Neto: $%.2f\n", this.getSueldoNeto());
     }
 
@@ -151,7 +144,6 @@ public class Empleado {
      * @return La cadena con el formato de resumen.
      */
     public String mostrarLinea() {
-        return String.format("%14d %15s \t............. $%16.2f", this.getCuil(), this.apeYNom(), this.getSueldoNeto());
+        return String.format("%20d %20s \t............. $20%.2f", this.getCuil(), this.apeYNom(), this.getSueldoNeto());
     }
 }
-

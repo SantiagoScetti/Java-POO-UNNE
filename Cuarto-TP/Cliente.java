@@ -75,17 +75,17 @@ public class Cliente {
      *  El método {@code agregaSaldo()} añade o resta saldo al cliente.
      * @param p_importe La cantidad a agregar o restar al saldo.
      */
-    public void agregaSaldo(double p_importe) {
-        this.saldo += p_importe;
-        System.out.println("Saldo: $" + saldo);
+    public void agregaSaldo(double p_importe) { 
+        setSaldo(this.getSaldo() + p_importe);
+        System.out.println("Saldo: $" + this.getSaldo());
     }
 
     /**
      * @param p_importe La cantidad nueva que se asignará a saldo.
      */
     public void nuevoSaldo(double p_importe) {
-        this.saldo = p_importe;
-        System.out.println("Saldo: $" + saldo);
+        setSaldo(p_importe);
+        System.out.println("Saldo: $" + this.getSaldo());
     }
 
     /**
@@ -93,7 +93,7 @@ public class Cliente {
      * DNI y saldo.
      */
     public void mostrar() {
-        System.out.println("Nombre y Apellido: " + getNombre() + getApellido() + "(" + getNroDni() + ")");
-        System.out.println("Saldo: $" + getSaldo());
+        System.out.println("Nombre y Apellido: " + this.getNombre() + this.getApellido() + "(" + this.getNroDni() + ")");
+        System.out.println("Saldo: $" + this.getSaldo());
     }
 }

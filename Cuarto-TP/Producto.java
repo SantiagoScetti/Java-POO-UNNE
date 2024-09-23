@@ -110,32 +110,32 @@ public class Producto {
 
 //otros metodos
     public void ajustarPtoRepo(double p_porce) {
-        setPorcPtoRepo(p_porce);
+        this.setPorcPtoRepo(p_porce);
     }
 
     public void ajustarExistMin(int p_cantidad) {
-        setExistMinima(p_cantidad);
+        this.setExistMinima(p_cantidad);
     }
 
     public String mostrarLinea() {
-        return getDescripcion() + "\t" + precioLista() + "\t"
-                + precioContado();
+        return this.getDescripcion() + "\t" + this.precioLista() + "\t"
+                + this.precioContado();
     }
 
     public double precioContado() {
-        return precioLista() - (precioLista() / 100) * 5;
+        return this.precioLista() - (this.precioLista() / 100) * 5;
     }
 
     public double precioLista() {
-        return getCosto() + (getCosto() / 100) * 12;
+        return this.getCosto() + (this.getCosto() / 100) * 12;
     }
 
     public double stockValorizado() {
-        return getStock() * getCosto();
+        return this.getStock() * this.getCosto();
     }
 
     public void ajuste(int p_cantidad) {
-        setStock(getStock() + p_cantidad);
+        this.setStock(getStock() + p_cantidad);
     }
 
     /**
@@ -146,10 +146,10 @@ public class Producto {
     public void mostrar() {
         System.out.println("Laboratorio: " + laboratorio.getNombre());
         System.out.println("Domicilio: " + laboratorio.getDomicilio() + " - Teléfono: " + laboratorio.getTelefono());
-        System.out.println("Rubro: " + getRubro());
-        System.out.println("Descripción: " + getDescripcion());
-        System.out.println("Precio Costo: " + getCosto());
-        System.out.println("Stock: " + getStock() + " - Stock Valorizado: $" + stockValorizado());
+        System.out.println("Rubro: " + this.getRubro());
+        System.out.println("Descripción: " + this.getDescripcion());
+        System.out.println("Precio Costo: " + this.getCosto());
+        System.out.println("Stock: " + this.getStock() + " - Stock Valorizado: $" + this.stockValorizado());
     }
 }
 

@@ -39,6 +39,6 @@ public class Localidad
 
     public String mostrar()
     {
-        return ("Localidad: " + getNombre() + "--" + "Provincia: " + getProvincia());
+        return ("Localidad: " + this.getNombre() + "--" + "Provincia: " + this.getProvincia());
     }
 }

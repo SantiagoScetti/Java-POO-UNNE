@@ -18,6 +18,13 @@ public class Laboratorio {
         setCompraMinima(p_compraMin);
         setDiaDeEntrega(p_diaEnt);
     }
+    public Laboratorio(String p_nombre,String p_domicilio, String p_telefono){
+        setNombre(p_nombre);
+        setDomicilio(p_domicilio);
+        setTelefono(p_telefono);
+        setCompraMinima(0);
+        setDiaDeEntrega(0);
+    }
     // Setters
     private void setNombre(String p_nombre) {
         this.nombre = p_nombre;
@@ -53,20 +60,16 @@ public class Laboratorio {
     }
 
     // Otros métodos
-    public Laboratorio(String p_nombre,String p_domicilio, String p_telefono){
-        this.nombre = p_nombre;
-        this.domicilio = p_domicilio;
-        this.telefono = p_telefono;
-    }
+   
     public void nuevaCompraMinima(int p_compraMin){
-        this.compraMinima = p_compraMin;
+        setCompraMinima(p_compraMin);
     } 
     public void nuevoDiaEntrega(int p_diaEnt){
-        this.diaDeEntrega = p_diaEnt;
+        setDiaDeEntrega(p_diaEnt);
     } 
 
     public String mostrar(){
-        return "Laboratorio:" + nombre + "Domicilio: " + domicilio + "Telefono: " + telefono;
+        return "Laboratorio:" + this.getNombre() + "Domicilio: " + this.getDomicilio() + "Telefono: " + this.getTelefono();
     } 
 
 }

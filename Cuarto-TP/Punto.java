@@ -49,14 +49,14 @@ public class Punto
      */
     public void desplazar(double p_dx, double p_dy)
     {
-        setX(p_dx);
-        setY(p_dy);
+        this.setX(p_dx);
+        this.setY(p_dy);
     }
     public void mostrar(){
-        System.out.println("Punto. X: " + getX() + " Y: " + getY() );
+        System.out.println("Punto. X: " + this.getX() + " Y: " + this.getY() );
     }
     public String coordenadas(){
-        return ("(" + getX() + " , "+ getY() +  ")"); 
+        return ("(" + this.getX() + " , "+ this.getY() +  ")"); 
     }
     
     public double distanciaA(Punto p_ptoDistante){

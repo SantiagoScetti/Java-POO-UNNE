@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Punto
+comment0.text=\r\n\ Ejercicio\ 2\ (Punto)\ DEL\ TP3\r\n\ \r\n\ @author\ Santi\r\n\ @version\ 3.0\r\n
+comment1.params=
+comment1.target=Punto()
+comment1.text=\r\n\ Constructores\ de\ la\ clase\ Punto\r\n
+comment10.params=p_ptoDistante
+comment10.target=double\ distanciaA(Punto)
+comment2.params=p_x\ p_y
+comment2.target=Punto(double,\ double)
+comment3.params=p_x
+comment3.target=void\ setX(double)
+comment4.params=p_y
+comment4.target=void\ setY(double)
+comment5.params=
+comment5.target=double\ getX()
+comment6.params=
+comment6.target=double\ getY()
+comment7.params=p_dx\ p_dy
+comment7.target=void\ desplazar(double,\ double)
+comment7.text=\r\n\ METODOS\r\n
+comment8.params=
+comment8.target=void\ mostrar()
+comment9.params=
+comment9.target=java.lang.String\ coordenadas()
+numComments=11

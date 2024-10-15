@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Lavarropas
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Lavarropas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=int\ getProgramas()
+comment2.params=programas
+comment2.target=void\ setProgramas(int)
+comment3.params=
+comment3.target=float\ getKilos()
+comment4.params=kilos
+comment4.target=void\ setKilos(float)
+comment5.params=
+comment5.target=boolean\ isAutomatico()
+comment6.params=automatico
+comment6.target=void\ setAutomatico(boolean)
+comment7.params=p_marca\ p_precio\ p_stock
+comment7.target=Lavarropas(java.lang.String,\ float,\ int)
+comment8.params=
+comment8.target=void\ imprimir()
+comment9.params=p_cuotas\ p_interes
+comment9.target=float\ creditoConAdicional(int,\ float)
+numComments=10

@@ -1,3 +1,5 @@
+package punto1;
+
 
 /**
  * Ejecutable del Ejercicio 1

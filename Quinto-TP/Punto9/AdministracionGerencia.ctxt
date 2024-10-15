@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=AdministracionGerencia
+comment0.text=\r\n\ Ejecutable\ del\ Punto9\r\n\r\n\ @author\ santi\r\n\ @version\ 1.0\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=scanner
+comment2.target=Servicio\ agregarServicio(java.util.Scanner)
+comment3.params=gerencia\ scanner
+comment3.target=void\ agregarAlojamientoMenu(Gerencia,\ java.util.Scanner)
+comment4.params=gerencia\ scanner
+comment4.target=void\ contarAlojamientosMenu(Gerencia,\ java.util.Scanner)
+comment5.params=gerencia\ scanner
+comment5.target=void\ quitarAlojamientoMenu(Gerencia,\ java.util.Scanner)
+numComments=6

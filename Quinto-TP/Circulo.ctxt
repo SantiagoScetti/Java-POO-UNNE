@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Circulo
+comment1.params=p_radio\ p_centro
+comment1.target=Circulo(double,\ Punto)
+comment1.text=\r\n\ Constructores\r\n
+comment2.params=p_radio
+comment2.target=Circulo(double)
+comment3.params=p_radio
+comment3.target=void\ setRadio(double)
+comment4.params=
+comment4.target=double\ getRadio()
+comment5.params=
+comment5.target=void\ caracteristicas()
+comment5.text=\r\n\ M\u00E9todos\r\n
+comment6.params=
+comment6.target=double\ perimetro()
+comment7.params=
+comment7.target=double\ superficie()
+comment8.params=otroCirculo
+comment8.target=double\ distanciaA(Circulo)
+comment9.params=otroCirculo
+comment9.target=Circulo\ elMayor(Circulo)
+numComments=10

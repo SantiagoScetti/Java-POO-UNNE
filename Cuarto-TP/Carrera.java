@@ -2,7 +2,7 @@
  * Exe del ejercicio Curso
  * 
  * @author Santi y Fran 
- * @version first try 😎
+ * @version first try 
  */
 import java.util.Scanner;
 import java.util.HashMap;

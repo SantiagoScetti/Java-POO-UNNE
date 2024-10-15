@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Elipse
+comment1.params=p_sEjeMayor\ p_sEjeMenor\ p_centro
+comment1.target=Elipse(double,\ double,\ Punto)
+comment10.params=
+comment10.target=double\ superficie()
+comment11.params=otroElipse
+comment11.target=double\ distanciaA(Elipse)
+comment12.params=otroElipse
+comment12.target=Elipse\ elMayor(Elipse)
+comment2.params=p_sEjeMayor\ p_sEjeMenor
+comment2.target=Elipse(double,\ double)
+comment3.params=p_ejeMayor
+comment3.target=void\ setSEjeMayor(double)
+comment4.params=p_ejeMenor
+comment4.target=void\ setSEjeMenor(double)
+comment5.params=
+comment5.target=double\ getSEjeMayor()
+comment6.params=
+comment6.target=double\ getSEjeMenor()
+comment7.params=
+comment7.target=java.lang.String\ nombreFigura()
+comment8.params=p_dx\ p_dy
+comment8.target=void\ desplazar(double,\ double)
+comment9.params=
+comment9.target=void\ caracteristicas()
+numComments=13

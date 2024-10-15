@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Jardin
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Jardin\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p_nombre\ p_figura
+comment1.target=Jardin(java.lang.String,\ FiguraGeometrica)
+comment10.params=
+comment10.target=int\ cuantasLatas()
+comment11.params=
+comment11.target=void\ detalleFiguras()
+comment2.params=p_nombre\ p_figuras
+comment2.target=Jardin(java.lang.String,\ java.util.ArrayList)
+comment3.params=p_nombre
+comment3.target=void\ setNombre(java.lang.String)
+comment4.params=p_figura
+comment4.target=void\ setFiguras(java.util.ArrayList)
+comment5.params=
+comment5.target=java.util.ArrayList\ getFiguras()
+comment6.params=
+comment6.target=java.lang.String\ getNombre()
+comment7.params=p_figura
+comment7.target=boolean\ agregarFigura(FiguraGeometrica)
+comment8.params=p_figura
+comment8.target=boolean\ quitarFigura(FiguraGeometrica)
+comment9.params=
+comment9.target=double\ cuantosLitros()
+numComments=12
